@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="./hangman.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+  </head>
+  <body style="background-color: dimgray">
+    <div id="mainContainer">
+      <div id="hanger">
+        <img src="./images/0.png" id="picture" />
+        <span>
+          Fail:
+          <span id="failCounter">0</span>
+        </span>
+      </div>
+      <div id="wlContainer">
+        <div id="wordContainer"></div>
+        <div id="letterContainer"></div>
+      </div>
+    </div>
+    <div class="LoseScreen">
+      <div id="lose">You lost!</div>
+      <button id="restartButton">Restart</button>
+    </div>
+    <div class="WinScreen">
+      <div id="win">You won!</div>
+      <button id="restartButton">Restart</button>
+    </div>
+  </body>
+  <script src="./hangman.js"></script>
+</html>
