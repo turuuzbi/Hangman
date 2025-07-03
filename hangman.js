@@ -43,13 +43,14 @@ const currentWord = words[randomIndex];
 
 function showLetter() {
   for (let i = 0; i < letters.length; i++) {
-    const newLetter = document.createElement("div");
+    const newLetter = document.createElement("button");
     newLetter.classList.add("letter");
     newLetter.id = i.toString();
     newLetter.innerText = letters[i];
     letterContainer.appendChild(newLetter);
 
     newLetter.addEventListener("click", function () {
+      newLetter.disabled = true
       filteredLetters.push(letters[i]);
       if (!currentWord.includes(letters[i])) {
         failCount++;
